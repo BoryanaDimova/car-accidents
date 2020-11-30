@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "car-accidents-6ede7",
+  "private_key_id": "1e9f440472b33d5304c9ba1be12bf37bf62d32f6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCWEOlKvXOk1cmq\nhVixOgQxso2Q1m65jqI4zxNBQF9h71falZo2mgm66FHyaicxCvsNszVjYpz4eGP+\nYpSCGoFaP+pG+NMT2E+VCJCMzGLYTF3Nc/o373e7e3E22/bFUIwY9G9R4F8qQfni\nHb2aKWGCbF7f0d/Qde2MgCciXYBbUinWYQacGGFKWVw5jRJtjeNwUiAgSU762p7w\nO9p0+XHsm+6CxwhB5Uppr7P6jWvkt2qvUdBE1hdBYCsnzuUyiotyyXhldvzXfI+d\n0t5oZbp5FAcD48uk/yI+4pxU/CL4RKN0EZ65jk95KP9h/WX6ASr5c0WF5xkVoARM\n+kJjx1MfAgMBAAECggEALEetLvqcBwV2TjSuqQzfc/Klxxke7u3hfDXODrD59CH1\noHAIYxgsytQGaitciSIeVjqNBFhyzPZpOwTHoWREyuaVMH/3eKGZSfaPAJzGheBy\nxU71hE/K2q1gCLn7JNnRnQNzXYuBSSzSmSABdF3FggCMNirtictiXtTpt0Azwb4X\nHvvLCF4d5Io/VdZhewpdUcajRjSsrIrH5x93qvu8c6JAJKp5xkbp61Wq7DA0TgOU\n9R7sdo1Bclsk4ArZCIwT5w5L7pPsdq25hob//u79ixDeW5BTbK++V9LG3mIRv4e1\nanuwsSZbm+uBSURvP6N908E6HCK9yLpVme/BO4skgQKBgQDHF4cDk5xsb08pCtDq\no7FpBBnIS9ghiG+ZQFYGYRCO8veMlP360OYbuF+aK3Nru+bNkQgOVZEmISBMxdnM\n5xpcfLxiNv7mPqDsWXYEE9OdfZvYdJTa3jVAd9Wy7knr8DcYaE8NfaDuw7p9UT1L\nVUpTAjRdbeylgErDOMCH8WOkfwKBgQDA9e/UAkzMcal7wM8RjlgryTttSoA7Hn7E\nh7BBmsMBpKTIWpGNXYBHT/b6W2KKEmraKdwf2m+l9vcK2OSV/GsDvJhChJJ4rx9B\ndcK6HAfY6Ss5AyIn6dPt6NHH5KiF2140QP1GvrTkxOfVUslCENV73U+4jPCM5top\nRe4fb96BYQKBgC43ygIMjG2n0WqntiQiaBcG+q1C3iO6tp2PD+lfMybcRJeAJw3I\n3QJmZNs3Zw4FiukB2CrrtkxxuDvaWlt08uuxkVIDjl0JAPadNgZwS9ntxPYU6lF8\n8EPNDfEB3GtHUqL55BAvr+J90Zcx+ta4MA7hHiLqV9t70t9LF3b3lLglAoGAXvEj\nfddb3kQWtjNaLzMwouqyeMXtbilFCoIQ8VaqmIZgJcyaTUoyMeRgizKnu3Pwa0Op\ncWrTAIARcZ7iagH2zbHf4OrF/ud7o4PDujrMiafAgp7OEYF1q1ugzI/vc11Kbr+D\nX2m6K83OnCHNsNoDkJyF+zItscZslV45GfK7MkECgYEAlhPlLoSAedncekDaRLrp\nShufd4r6j4OFh0v+lddCss4KKqt3GH7CSBV3x4s4C7lMI/plTocmCXoHL5LaXTLl\nyBOf0+AzbMFnBCPz/P+MISac30t9RkDGIuUwJRUtKQ/7w2Iz2/NwtgCpnFxOfeRx\nFSyuwYbI1EhYPrD7jvFjJB8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-bigquery-sa@car-accidents-6ede7.iam.gserviceaccount.com",
+  "client_id": "117257276782202760079",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-bigquery-sa%40car-accidents-6ede7.iam.gserviceaccount.com"
+}

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Car Accidents</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/fontawesome")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        .nav-item {
+            float: right !important;
+            padding-right: 5% !important;
+        }
+
+        .navbar-right {
+            width: 100% !important;
+            float: right !important;
+        }
+
+        .link-color {
+            color: white;
+        }
+        .scrollable {
+            overflow-y: auto; /* Trigger vertical scroll    */
+            overflow-x: hidden; /* Hide the horizontal scroll */
+        }
+    </style>
+</head>
+<body>
+    <!--Навигация -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark text-white">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            <div class="navbar-brand navbar-header text-white">@Html.ActionLink("Traffic Accidents", "Index", "Home", new { @class = "link-color" })</div>
+
+            <div class="navbar-collapse collapse navbar-inverse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav navbar-right float-right text-white">
+                </ul>
+                <ul class="nav navbar-nav navbar-right float-right text-white">
+                    <li class="nav-item">@Html.ActionLink("Your Area", "Index", "Home", new { @class = "link-color" })</li>
+                    <li class="nav-item"> @Html.ActionLink("Top 10 States", "Top10States", "Home", new { @class = "link-color" })</li>
+                    <li class="nav-item"> @Html.ActionLink("Factors", "Factors", "Home", new { @class = "link-color" })</li>  
+                    <li class="nav-item"> @Html.ActionLink("Roads", "Index", "States", new { @class = "link-color" })</li>
+                    <li class="nav-item"> @Html.ActionLink("Map", "Map", "Home", new { @class = "link-color" })</li>
+                </ul>
+            </div>
+    </nav>
+
+
+        <div class="row">
+            <div id="bodyContent" class="container body-content col-md-12 scrollable" style="float:right">
+                @RenderBody()
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer font-small unique-color-dark bg-dark fixed-bottom">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left mt-5 text-warning">
+
+                <!-- Grid row -->
+                <div class="row mt-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-3">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold link-color">Products</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            @Html.ActionLink("Your Area", "Index", "Users", new { @class = "link-color" })
+                        </p>
+                        <p>
+                            @Html.ActionLink("Top 10 States", "Top10States", "Home", new { @class = "link-color" })
+                        </p>
+                        <p>
+                            @Html.ActionLink("Map", "Map", "Home", new { @class = "link-color" })   
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-3">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold link-color">Purposes</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            @Html.ActionLink("Roads", "Index", "States", new { @class = "link-color" })
+                        </p>
+                        <p>
+                            @Html.ActionLink("Factors", "Factors", "Home", new { @class = "link-color" })
+                        </p>
+                        <p>
+                            @Html.ActionLink("Search", "Index", "States", new { @class = "link-color" })
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold link-color">Contact</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p class="link-color">
+                            <i class="fa fa-home"></i> Plovdiv, 4000, Bulgaria
+                        </p>
+                        <p class="link-color">
+                            <i class="fa fa-envelope"></i> stu1701321000@uni-plovdiv.bg
+                        </p>
+                        <p class="link-color">
+                            <i class="fa fa-phone"></i> +359 888 888 888
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 text-white">
+                © 2020 Copyright: Car Accidents
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

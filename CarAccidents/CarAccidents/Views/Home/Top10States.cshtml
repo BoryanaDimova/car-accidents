@@ -1,0 +1,82 @@
+﻿@model CarAccidents.Models.MapModel
+
+@{
+    ViewBag.Title = "Top 10 States Accidents";
+}
+
+@Scripts.Render("~/bundles/jquery")
+
+<script src="https://cdn.anychart.com/releases/8.3.0/js/anychart-core.min.js" type="text/javascript"></script>
+<script src="https://cdn.anychart.com/releases/8.3.0/js/anychart-map.min.js" type="text/javascript"></script>
+<script src="https://cdn.anychart.com/geodata/1.2.0/countries/united_states_of_america/united_states_of_america.js"></script>
+
+<style>
+    .list-item {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: large;
+        list-style-type: none;
+    }
+
+</style>
+
+<div class="jumbotron">
+    <h1 style="text-align:center">Top 10 States With Most Accidents from 2018</h1>
+</div>
+
+<div class="container">
+    <div class="row" style="width:100%">
+        <div id="map" style="height:25vw" class="col-8"></div>
+        <div id="states-list" style="height:25vw; align-content:center" class="col-4">
+            <h2>Top 10 States</h2>
+            <ul class="content-list" style="align-content:center">
+                @for (int i = 0; i < 10; i++)
+                {
+                   <li class="list-item" onclick="showState(@Model.ResultDataList[i])"> <b>@(i+1).</b> @Model.ResultDataList[i].stateName</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+$(document).ready(function () {
+        // create map
+    map = anychart.map();
+
+    var object = @(Html.Raw(Json.Encode(Model)));
+    var data = JSON.parse(JSON.stringify(object.ResultDataList));
+        // create data set
+        var dataSet = anychart.data.set(
+            data
+        );
+
+        // create choropleth series
+        series = map.choropleth(dataSet);
+        series.tooltip().format("Accidents: {%value}");
+        // set geoIdField to 'id', this field contains in geo data meta properties
+        series.geoIdField('id');
+
+        var customColorScale = anychart.scales.ordinalColor();
+        customColorScale.ranges([
+            { less: 500 },
+            { from: 500, to: 1000 },
+            { from: 1000, to: 1500 },
+            { greater: 1500 }
+        ]);
+        map.colorRange(true);
+        customColorScale.colors(["#CF7A78", "#E69645", "#69A231", "#4D7623"]);
+        // set map color settings
+        series.colorScale(customColorScale);
+        series.hovered().fill('#b3b3ff');   
+        // set geo data, you can find this map in our geo maps collection
+        // https://cdn.anychart.com/#maps-collection
+        map.geoData(anychart.maps['united_states_of_america']);
+
+        //set map container id (div)
+        map.container('map');
+
+        //initiate map drawing
+        map.draw();
+});
+    </script>
